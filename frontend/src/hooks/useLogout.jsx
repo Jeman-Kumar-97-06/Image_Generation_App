@@ -1,12 +1,12 @@
 import { useAuthContext } from "./useAuthContext";
-
+import { useGenContext } from "./useGenContext";
 export const useLogout = () => {
     const {dispatch} = useAuthContext();
-    // const {dispatch:wallContext} = useWallContext();
+    const {dispatch:imgContext} = useGenContext();
     const logout = () => {
         localStorage.removeItem('img_gen_usr');
         dispatch({type:"LOGOUT"});
-        // wallContext({type:"SETWALLS",payload:null});
+        imgContext({type:"SET_IMGS",payload:[]});
     };
     return {logout};
 }

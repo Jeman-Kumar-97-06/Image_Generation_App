@@ -8,7 +8,7 @@ export const useLogin = () => {
     const login = async (usrn,pwd) => {
         setIsloading(true);
         setError(null);
-        const resp = await fetch('https://imggen-06-03.onrender.com/api/users/login',{
+        const resp = await fetch('https://imagepiggen.vercel.app/api/users/login',{
             method:"POST",
             headers:{'Content-Type':'application/json'},
             body : JSON.stringify({usrn,pwd})
