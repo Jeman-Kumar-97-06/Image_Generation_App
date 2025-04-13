@@ -9,14 +9,19 @@ const pRts     = require('./routes/prompts');
 const app      = express();
 
 //CORS
-app.options("*", cors()); 
+// app.options("*", cors()); 
+// app.use(cors({
+//     origin: ['http://localhost:5173','https://imagegen0603-egt0qv5yn-jemans-projects.vercel.app','https://api.imagepig.com'], // Change this to your frontend URL
+//     //origin:['*'],
+//     methods: ['GET', 'POST', 'PUT','PATCH','DELETE'],
+//     // Allows both Content-Type and Authorization:
+//     allowedHeaders: ['Content-Type', 'Authorization']
+// }));
+
 app.use(cors({
-    origin: ['http://localhost:5173','https://imagegen0603-egt0qv5yn-jemans-projects.vercel.app','https://api.imagepig.com'], // Change this to your frontend URL
-    //origin:['*'],
-    methods: ['GET', 'POST', 'PUT','PATCH','DELETE'],
-    // Allows both Content-Type and Authorization:
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+    origin : 'https://imagepiggen.vercel.app/',
+    credentials : true
+}))
 
 app.use(express.json());
 
