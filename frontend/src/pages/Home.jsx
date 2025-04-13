@@ -40,7 +40,7 @@ const Home = () => {
     //Everytime page loads:
     useEffect(()=>{
       const fetchAll = async () => {
-        const resp = await fetch("https://imagepiggen.vercel.app/api/prompts/gt_p",{
+        const resp = await fetch("https://imagegenbackend-production-be8a.up.railway.app/api/prompts/gt_p",{
           method:"GET",
           headers:{"Authorization":`Bearer ${user.token}`,'Content-Type':'application/json'},
         });
@@ -65,7 +65,7 @@ const Home = () => {
       }
       lastRequestTime = now;
       setIsModalOpen(true);
-      const resp = await fetch("https://imagepiggen.vercel.app/api/prompts/save_p",{
+      const resp = await fetch("https://imagegenbackend-production-be8a.up.railway.app/api/prompts/save_p",{
         method:"POST",
         headers:{"Authorization":`Bearer ${user.token}`, "Content-Type": "application/json"},
         body:JSON.stringify({'prompt':prompt})

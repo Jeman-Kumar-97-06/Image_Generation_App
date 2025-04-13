@@ -15,7 +15,7 @@ export const useSignup = () => {
         fData.append('pfPic',pfPic);
         console.log(fData)
 
-        const resp = await fetch('https://imagepiggen.vercel.app/api/users/signup',{
+        const resp = await fetch('https://imagegenbackend-production-be8a.up.railway.app/api/users/signup',{
             method : "POST",
             body : fData
         })
