@@ -1,5 +1,5 @@
 {
-  "proxy" : "https://imggen-06-03.onrender.com",
+  "proxy" : "https://imagegenbackend-production-be8a.up.railway.app",
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
