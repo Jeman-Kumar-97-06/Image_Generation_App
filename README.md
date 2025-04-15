@@ -40,6 +40,18 @@ This app is a full-stack AI image generation web app that allows users to genera
 git clone https://github.com/your-username/imagepig-ai-app.git
 cd imagepig-ai-app
 ```
+3. **Go to the Project root:**
+```bash
+cd backend
+npm install
+nodemon server.js
+```
+4. **Open another Terminal window:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ## Required .env Variables : 
 - MONGOURL : your mongodb atlas url
