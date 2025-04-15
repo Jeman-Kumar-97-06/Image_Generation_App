@@ -42,8 +42,8 @@ cd imagepig-ai-app
 ```
 
 ## Required .env Variables : 
-MONGOURL : your mongodb atlas url
-API_K, API_2, API_3 : Generate 3 free ImagePig APIs with any of your emailIDs or your friends' emailIDs.
-API_SEC : Cloudinary API secret key.
-PORT : Any port (4000/ 3000/ ....)
-SEC : Random string to use as a secret to create JWT.
+- MONGOURL : your mongodb atlas url
+- API_K, API_2, API_3 : Generate 3 free ImagePig APIs with any of your emailIDs or your friends' emailIDs.
+- API_SEC : Cloudinary API secret key.
+- PORT : Any port (4000/ 3000/ ....)
+- SEC : Random string to use as a secret to create JWT.
