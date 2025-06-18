@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@font-face {
+  font-family: 'SpaceAge';
+  src: url('./assets/fonts/spaceage.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeoSansLight';
+  src: url('./assets/fonts/GeosansLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

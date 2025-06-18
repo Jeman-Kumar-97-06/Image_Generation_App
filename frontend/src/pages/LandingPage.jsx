@@ -2,11 +2,25 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 const LandingPage = () => {
     return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="bg-[#66D2CE] text-white min-h-screen">
+    <motion.div 
+       style={{
+            fontFamily : 'GeoSansLight',
+            fontSize: '3vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+      initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="bg-[#66D2CE] text-white min-h-screen">
       {/* Hero Section */}
       <section className="text-center py-20">
-        <h1 className="text-5xl text-black font-bold">ImgGen</h1>
-        <p className="text-lg text-black mt-4 mb-5">
+        <h1
+         style={{
+            fontFamily : 'SpaceAge',
+            fontSize: '8vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+         className="text-5xl text-black">Imaginetix</h1>
+        <p className="text-3xl text-black mt-4 mb-5">
           Generate stunning images with AI in seconds!
         </p>
         <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
