@@ -34,19 +34,36 @@ const LandingPage = () => {
       <section className="text-center py-10">
         <h2 className="text-3xl font-semibold text-black">How it works</h2>
         <div className="flex justify-center mt-6 space-x-8">
-          <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="bg-[#E3D2C3] p-6 rounded-lg shadow-2xl cursor-pointer">
-            <h3 className="text-xl text-black font-bold">High-Quality Images</h3>
-            <p className="text-black">Uses Image Pig API to generate image.</p>
-          </motion.div>
-          <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="bg-[#E3D2C3] p-6 rounded-lg shadow-2xl cursor-pointer">
-            <h3 className="text-xl font-bold text-black">Save generated images</h3>
-            <p className="text-black">Generate images and save/download them.<span className="text-red-500">Login required*</span></p>
-          </motion.div>
-          <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="bg-[#E3D2C3] p-6 rounded-lg shadow-2xl cursor-pointer">
-            <h3 className="text-xl font-bold text-red-500">Upto 90 Free images</h3>
-            <p className="text-black">That's all my free API Key supports!</p>
-          </motion.div>
-        </div>
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className="backdrop-blur-md bg-white/30 p-6 rounded-lg shadow-2xl cursor-pointer border border-white/20"
+  >
+    <h3 className="text-xl text-black font-bold">High-Quality Images</h3>
+    <p className="text-black">Uses Image Pig API to generate image.</p>
+  </motion.div>
+
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className="backdrop-blur-md bg-white/30 p-6 rounded-lg shadow-2xl cursor-pointer border border-white/20"
+  >
+    <h3 className="text-xl font-bold text-black">Save generated images</h3>
+    <p className="text-black">
+      Generate images and save/download them.
+      <span className="text-red-500">Login required*</span>
+    </p>
+  </motion.div>
+
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className="backdrop-blur-md bg-white/30 p-6 rounded-lg shadow-2xl cursor-pointer border border-white/20"
+  >
+    <h3 className="text-xl font-bold text-red-500">Upto 90 Free images</h3>
+    <p className="text-black">That's all my free API Key supports!</p>
+  </motion.div>
+</div>
       </section>
 
       {/* Demo Section */}
