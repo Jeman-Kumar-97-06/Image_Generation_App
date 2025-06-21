@@ -29,8 +29,15 @@ const Signup = () => {
       };
 
     return (
-        <div className="signup_page w-[100vw] h-[100vh] content-center">
-            <motion.form initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1}} className="m-auto bg-[#66D2CE] flex flex-col w-[400px] p-5 pt-10 rounded-lg" onSubmit={handleSignup}>
+        <div
+         style={{
+            fontFamily : 'GeoSansLight',
+            fontSize: '2.5vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+         className="signup_page w-[100vw] h-[100vh] content-center">
+            <motion.form initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1}} className="m-auto backdrop-blur-md bg-blue-500/30 flex flex-col w-[400px] p-5 pt-10 rounded-lg" onSubmit={handleSignup}>
                 <input 
                     value={fullname}
                     onChange={e=>setFullname(e.target.value)}
@@ -71,8 +78,9 @@ const Signup = () => {
                         />
                     </label>      
                 </div>
-                <button type='submit' className="cursor-pointer shadow-sm bg-[#E3D2C3] w-[100px] p-2 rounded-lg">Signup</button>
-                <p>Already have an account ? <Link to='/login' className="text-blue-800">Login</Link></p>
+                <button type='submit' className="cursor-pointer shadow-sm bg-radial from-pink-400 from-40% to-fuchsia-700 w-[100px] p-2 rounded-lg">Signup</button>
+                <p className="mt-4 text-white">Already have an account ? <Link to='/login' className="text-purple-400">Login</Link></p>
+                {isloading && <span className='text-white'>Please wait, the server is bit slow. 😿</span>}
             </motion.form>
         </div>
     )

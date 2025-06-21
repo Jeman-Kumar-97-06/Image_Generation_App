@@ -14,16 +14,16 @@ const Recents = ({txts,ims}) => {
 
   return (
         <div className="flex gap-4 mt-6 w-full max-w-4xl m-auto flex-col sm:flex-row">
-          <div className="flex-1 bg-[#A1E3F9] p-4 rounded-lg shadow">
-            <h3 className="text-lg font-semibold">Recent Prompts</h3>
+          <div className="flex-1 bg-radial-[at_25%_25%] from-sky-200 via-blue-400 to-indigo-900 to-90% p-4 rounded-lg">
+            <h3 className="text-lg font-semibold underline">Recent Prompts</h3>
             <ul className="mt-2 space-y-2">
               {txts.map(t=>(
-                <li className="p-2 bg-white rouded shadow">{t}</li>
+                <li className="p-2 bg-white rouded shadow text-[20px]">{t}</li>
               ))}
             </ul>
           </div>
-          <div className="flex-1 bg-[#A1E3F9] p-4 rounded-lg shadow">
-            <h3 className="text-lg font-semibold">Recent Generated Images</h3>
+          <div className="flex-1 bg-radial-[at_25%_25%] from-pink-400 from-40% to-fuchsia-700 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold underline">Recent Generated Images</h3>
             <div className="mt-2 grid grid-cols-2 gap-2">
               {
                 ims.map(i=>(

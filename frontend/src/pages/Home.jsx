@@ -90,13 +90,30 @@ const Home = () => {
     // },[dispatch,user]);
 
     return (
-        <motion.div initial={{opacity:0}} animate={{ opacity: 1 }} transition={{ duration:1 }}>
+        <motion.div 
+          style={{
+            fontFamily : 'GeoSansLight',
+            fontSize: '3vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+          className="mt-13 bg-black"
+          initial={{opacity:0}} animate={{ opacity: 1 }} transition={{ duration:1 }}>
         <Navbar username={user.user.usrn} profPic={user.user.pfPic}/>
-        <div className="home_page w-[100vw] h-[100vh] text-center content-center py-10 bg-[#EFEFEF] ">
-           <h2 className='inline-block text-3xl font-bold'>What's on your mind</h2>
+        <div className="home_page w-[100vw] h-[100vh] text-center content-center py-10 bg-black ">
+           <h2
+            style={{
+            fontFamily : 'SpaceAge',
+            fontSize: '5vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+            className='inline-block text-3xl text-purple-400 font-bold'>
+              Ask me anything
+            </h2>
            <form className="m-auto mt-15 w-[300px] flex-row sm:w-[550px] sm:flex-row" onSubmit={handleGenerate}>
-                <input placeholder="Type Something" value={prompt} onChange={e=>{setPrompt(e.target.value)}} type="text" className="border-2 p-3 sm:w-[400px] w-[250px]  border-black rounded-lg bg-white"/>
-                <button className='p-2 font-bold text-xl rounded-lg shadow-m m-4 bg-[#3F7D58]' type='submit'>Generate</button>
+                <input placeholder="Type Something" value={prompt} onChange={e=>{setPrompt(e.target.value)}} type="text" className="border-2 p-3 sm:w-[400px] w-[250px]  border-black rounded-lg bg-white shadow-[0_0_20px_white]"/>
+                <button className='p-2 font-bold text-xl rounded-lg shadow-m m-4 bg-[#3F7D58] cursor-pointer' type='submit'>Generate</button>
            </form>
            <div className="image_result">
 
@@ -105,8 +122,8 @@ const Home = () => {
            {/* Modal to show image generated */}
            {isModalOpen && <Modal isM={isModalOpen} setisM={setIsModalOpen}/>}
         </div>
-        <footer className="bg-blue-600 text-white text-center p-4">
-        © 2025 Jeman06. All rights reserved.
+        <footer className="bg-blue-500/30 text-white text-center text-[15px] font-bold p-3 sticky bottom-0">
+        © 2025 Jeman06
       </footer>
         </motion.div>
     )

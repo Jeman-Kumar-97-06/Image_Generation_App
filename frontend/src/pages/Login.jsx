@@ -19,8 +19,15 @@ const Login = () => {
     }
 
     return (
-        <div className="login_page w-[100vw] h-[100vh] content-center">
-            <motion.form initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="m-auto bg-[#66D2CE] flex flex-col w-[400px] p-5 pt-10 rounded-lg" onSubmit={handleLogin}>
+        <div
+         style={{
+            fontFamily : 'GeoSansLight',
+            fontSize: '2.5vh', // Fits the height of h-32 (~128px) dynamically
+            lineHeight: '1',
+            // textShadow: '0 0 5px white, 0 0 15px white',
+            }}
+         className="login_page w-[100vw] h-[100vh] content-center text-white">
+            <motion.form initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="text-black m-auto backdrop-blur-md bg-blue-500/30 flex flex-col w-[400px] p-8 pt-10 rounded-lg" onSubmit={handleLogin}>
                 <input 
                     type='text' 
                     className="p-3 bg-white rounded-lg mb-5" 
@@ -35,11 +42,11 @@ const Login = () => {
                     onChange={e=>{setPassword(e.target.value)}}
                     value={password}
                     />
-                <button type='submit' className="cursor-pointer shadow-sm bg-[#E3D2C3] w-[100px] p-2 rounded-lg">Login</button>
-                <p>Already have an account ? <Link to='/signup' className='text-blue-700'>Signup</Link></p>
+                <button type='submit' className="cursor-pointer shadow-sm bg-radial from-pink-400 from-40% to-fuchsia-700 w-[100px] p-2 rounded-lg text-white">Login</button>
+                <p className='mt-3 text-white'>Already have an account ? <Link to='/signup' className='text-purple-400'>Signup</Link></p>
                 {error && <span className='text-red-500'>{error}*</span>}
                 {err && <span className='text-red-500'>{err}*</span>}
-                {isloading && <span>Please wait, the server is bit slow. 😿</span>}
+                {isloading && <span className='text-white'>Please wait, the server is bit slow. 😿</span>}
             </motion.form>
         </div>
     )

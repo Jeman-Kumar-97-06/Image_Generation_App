@@ -12,3 +12,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+body{
+  background-color: black;
+  width:100vw;
+  height:100vh;
+}
